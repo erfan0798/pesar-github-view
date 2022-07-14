@@ -31,7 +31,7 @@ app.get("/api/v1/getView", (req, res) => {
         })
 })
 
-const port = 4000
+const port = 5000
 app.listen(port, () => {
     console.log(`app is runnig at ${port}`)
 })
