@@ -3,9 +3,11 @@ const app = express()
 const fs = require('fs-extra')
 
 
+app.get("/", (req, res) => {
+    res.status(200).send("heloo")
+})
+
 app.post("/api/v1/insertView", (req, res) => {
-
-
     fs.readJson('./view.json')
         .then(count => {
             fs.writeJson('./view.json', { count: parseInt(Object.values(count)) + 1 })
